@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+  
+}
+
+html,
+body {
+  height: 100%;
+
+  width: 100%;
+}
+#scroll{
+  height:25px;
+  width:25px;
+  border-radius:50%;
+  background-color:#95c11e;
+  position:absolute;
+  z-index:99;
+  position:fixed;
+}
+#blur{
+  height:400px;
+  width:400px;
+  border-radius:50%;
+  background-color:#96c11e34;
+  position:absolute;
+  z-index:6;
+  position:fixed;
+  filter:blur(16px)}
+#nav{
+
+    height:120px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    gap:40px;
+    z-index: 99;
+    padding: 0 125px;
+    position:fixed;
+    
+}
+#nav img{
+    height:70px;
+
+}
+#main{
+    position:relative; 
+    background-color: rgba(0, 0, 0, 0.312);
+    z-index: 7;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#page1{
+
+  height:100vh;
+  width:100%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+#page1 h1{
+    font-size: 130px;
+    font-weight: 1000;
+   position:relative;
+ 
+   margin-left:90px;
+}
+#page1 h1::before{
+  content:"EAT.DRINK.GOLF.";
+  position:absolute;
+  color:black;
+  position:absolute;
+  top:-4px;
+  left:-5px;
+  -webkit-text-stroke: 2px #95c11e;
+  z-index:-1;
+  
+}
+#page1 p{
+  font-size:15px;
+  font-weight:400;
+  width:45%;
+}
+#page1 h2{
+  font-size:35px;
+  font-weight:800;
+   margin-bottom:20px;
+   margin-top:10px;
+  
+}
+#page2{
+  height:100vh;
+
+}
+#scroller{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 400px;
+  position:relative;
+  z-index:7;
+}
+
+#scroller::-webkit-scrollbar{
+  display:none;
+}
+#scroller-in-1{
+  display:inline-block;
+  white-space: nowrap;
+    animation-timing-function: linear;
+  animation-name:scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+#scroller-in-2{
+  display:inline-block;
+  white-space: nowrap;
+    animation-timing-function: linear;
+  animation-name:scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+#scroller h4{
+  text-transform:uppercase;
+  display:inline-block;
+  white-space: nowrap;
+  font-size:140px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-left:10px;
+  -webkit-text-stroke: 2px #95c11e;
+  color: transparent;
+  transition: all linear 0.5s;
+  
+}
+#scroller h4:hover{
+  color:#95c11e;
+  
+}
+
+@keyframes scroll{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}
+#about-us{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+#about-us img{
+  height:200px;
+  width:200px;
+  object-fit:cover;
+  border-radius:20px;
+  margin-left:30px;
+  z-index: 7;
+  position:relative;
+}
+#about-us img:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+
+  box-shadow:
+    0 0 20px #b6ff2b,
+    0 0 40px #95c11e;
+}
+
+
+#about-us-in{
+  width:40vw;
+  height:80%;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+
+}
+#about-us-in h3{
+  font-size:40px;
+  padding-right:40px;
+  font-weight:700;
+}
+#about-us-in p{
+  margin-top: 30px;
+  line-height: 31px;
+  font-weight:500;
+}
+#cards-container{
+  margin-top:100px;
+  display:flex;
+  justify-content: center;
+  gap:20px;
+
+  background-color: black;
+  
+  
+}
+#cards-container img{
+ padding:0 40px;
+ width:25%;
+ height:500px;
+ border-radius: 40px;
+ padding-bottom:40px;
+ object-fit: cover;
+ z-index:7;
+}
+#cards-container img {
+  transition: 0.4s;
+}
+
+#cards-container img:hover {
+  box-shadow:
+    0 0 20px #b6ff2b,
+    0 0 40px #95c11e,
+    0 0 60px #cfff5e;
+
+  transform: scale(1.05);
+}
+
+#sign-up{
+  height:40vh;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+background: linear-gradient(
+  45deg,
+  #b6ff2b,
+  #95c11e,
+  #6ea30d,
+  #cfff5e
+);
+
+  z-index:7;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+#footer{
+  height:50%;
+  background-color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
